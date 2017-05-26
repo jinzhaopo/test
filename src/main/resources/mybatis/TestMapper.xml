@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.test.dao.testDao">
+	<resultMap type="com.test.entry.SaleBean" id="SaleBean">
+		<result column="name" property="name"/>
+		<result column="licence_number" property="idCard"/>
+		<result column="phone_number" property="phone"/>
+	</resultMap>
+	<select id="findByName" resultMap="SaleBean" parameterType="java.lang.String">
+		select name,licence_number,phone_number from s_tourist where name=#{name}
+	</select>
+</mapper>

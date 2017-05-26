@@ -1,0 +1,16 @@
+<html>
+<head>
+<script type="text/javascript" src="jquery-1.7.1.js"></script>
+<script type="text/javascript">
+
+
+$(window).on('beforeunload ',function() {
+	
+	console.log($("#pageNumber").value);
+});
+</script>
+</head>
+<body>
+<p>当您点击 <a href="http://w3school.com.cn">这个链接</a> 时，或者关闭窗口，会触发一个警告框。</p>
+</body>
+</html>
